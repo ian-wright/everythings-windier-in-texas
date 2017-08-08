@@ -22,25 +22,45 @@
     <div id="map" ></div>
     <div class="overlay" id="title" >
         <h1>Everything's Windier in Texas</h1>
-        <h2>Localized wind speeds and wholesale power prices in realtime. <a id="custom-link" >Why?</a></h2>
+        <h2>Localized wind speeds and wholesale power prices in realtime. <a href="#" data-toggle="modal" data-target="#info-modal"> Why?</a></h2>
         <p>
             <Strong>Stack:&nbsp;&nbsp;&nbsp;</Strong>
-            <a href="https://kafka.apache.org/" title="Kafka">Kafka</a>, 
-            Scala & <a href="https://spark.apache.org/streaming/" title="Spark Streaming">Spark Streaming</a>, 
-            <a href="https://www.pubnub.com/" title="PubNub">PubNub</a>,
+            <a href="https://kafka.apache.org/" title="Kafka">Kafka</a>,&nbsp;
+            Scala & <a href="https://spark.apache.org/streaming/" title="Spark Streaming">Spark Streaming</a>,&nbsp; 
+            <a href="https://www.pubnub.com/" title="PubNub">PubNub</a>,&nbsp;
             <a href="http://leafletjs.com/" title="Leaflet">Leaflet.js</a>
         </p>
         <p>
             <Strong>Data:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Strong>
-            <a href="https://www.satori.com/channels/METAR-AWC-US" title="METAR Weather">METAR Weather</a>,
-            <a href="http://www.ercot.com/content/cdr/contours/rtmLmp.html" title="ERCOT RTM">ERCOT RTM Prices</a>
+            METAR <a href="https://www.satori.com/channels/METAR-AWC-US" title="METAR Weather">Weather</a>,&nbsp;
+            ERCOT RTM <a href="http://www.ercot.com/content/cdr/contours/rtmLmp.html" title="ERCOT RTM">Prices</a>
         </p>
         <p>
             <Strong>Me:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Strong>
-            <a href="https://github.com/ian-wrightGithub" title="Github">Github</a>,
+            <a href="https://github.com/ian-wrightGithub" title="Github">Github</a>,&nbsp;
             <a href="https://www.linkedin.com/in/ianftwright/" title="LinkedIn">LinkedIn</a>
         </p>
     </div>
+
+    <!-- bootstrap modal -->
+    <div id="info-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <!-- <h4 class="modal-title">Modal Header</h4> -->
+            <p>Some text in the modal.</p>
+          </div>
+         <!--  <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+
     <div class="overlay legend legend-text" id="legend-title" > LEGEND </div>
     <div class="overlay legend" id="price-legend" >
         <img src="dollar.png" class="smallest-icon" >

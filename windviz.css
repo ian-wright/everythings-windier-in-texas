@@ -65,14 +65,12 @@
 	left: 0;
 	bottom: 0;
 	z-index: 1;
-/*	background: rgba(255, 255, 255, 0.7);*/
-	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: 'Raleway', sans-serif;
+	color: rgba(242, 242, 242, .8);
+	font-weight: 500;
+	font-size: 11px;
 	padding-left: 5px;
 }
-
-/*a:link#icon-credit {
-	color: rgb(51, 102, 153);
-}*/
 
 h1 {
 	font-weight: 800;
@@ -106,7 +104,7 @@ strong {
 	color: rgba(255, 170, 128, .8);
 }
 
-#custom-link {
+#why-link {
 	color: rgba(255, 170, 128, .8);
 }
 
@@ -136,4 +134,24 @@ strong {
 
 .legend-text {
 	text-align: center;
+}
+
+#info-modal {
+	border-radius: 10px;
+ 	background-color: : rgba(128, 128, 128, .7);
+	border-style: dashed;
+	border-width: 1px;
+	border-color: rgba(255, 170, 128, .8);
+	font-family: 'Raleway', sans-serif;
+	color: rgba(242, 242, 242, .8);
+}
+
+.modal-header {
+	border-radius: 10px;
+ 	background-color: : rgba(128, 128, 128, .7);
+	border-style: dashed;
+	border-width: 1px;
+	border-color: rgba(255, 170, 128, .8);
+	font-family: 'Raleway', sans-serif;
+	color: rgba(242, 242, 242, .8);
 }
