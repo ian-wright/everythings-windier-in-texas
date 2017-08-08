@@ -1,0 +1,139 @@
+#map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+
+}
+
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: rgba(128, 128, 128, .7);
+    color: rgba(242, 242, 242, .8);
+}
+
+.overlay {
+	position: absolute;
+	border-radius: 10px;
+ 	background: rgba(128, 128, 128, .7);
+ 	z-index: 1;
+	border-style: dashed;
+	border-width: 1px;
+	border-color: rgba(255, 170, 128, .8);
+	font-family: 'Raleway', sans-serif;
+	color: rgba(242, 242, 242, .8);
+}
+
+#title {
+	width: 610px;
+	height: 160px;
+	top: 30px;
+	left: 30px;
+	padding: 10px;
+}
+
+.legend {
+	width: 90px;
+	right: 10px;
+}
+
+#legend-title {
+	
+	height: 25px;
+	bottom: 455px;
+	font-weight: 700;
+	padding-top: 2px;
+
+}
+
+#price-legend {
+	height: 210px;
+	bottom: 235px;
+}
+
+#wind-legend {
+	height: 200px;
+	bottom: 25px;
+}
+
+#icon-credit {
+	position: absolute;
+	width: 300px;
+	height: 18px;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+/*	background: rgba(255, 255, 255, 0.7);*/
+	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	padding-left: 5px;
+}
+
+/*a:link#icon-credit {
+	color: rgb(51, 102, 153);
+}*/
+
+h1 {
+	font-weight: 800;
+	font-size: 24px;
+	color: rgba(255, 170, 128, .8);
+	margin: 0;
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 18px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+p {
+	font-weight: 500;
+	font-size: 14px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+a {
+	text-decoration: underline;
+	font-family: 'Raleway', sans-serif;
+	color: rgba(242, 242, 242, .8);
+}
+
+strong {
+	font-weight: 700;
+	color: rgba(255, 170, 128, .8);
+}
+
+#custom-link {
+	color: rgba(255, 170, 128, .8);
+}
+
+.biggest-icon {
+	height: 80px;
+	width: 80px;
+	display: block;
+    margin: auto;
+}
+
+.smallest-icon {
+	height: 8px;
+	width: 8px;
+	display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.chevron {
+	width: 40px;
+	opacity: 0.8;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: block;
+    margin: auto;
+}
+
+.legend-text {
+	text-align: center;
+}
