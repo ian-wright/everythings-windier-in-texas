@@ -21,11 +21,11 @@
 			}).addTo(wind.mapObject);
 
 			var WindIcon = L.Icon.extend({
-			    options: {iconUrl: 'wind.png'}
+			    options: {iconUrl: 'img/wind.png'}
 			});
 
 			var DollarIcon = L.Icon.extend({
-			    options: {iconUrl: 'dollar.png'}
+			    options: {iconUrl: 'img/dollar.png'}
 			});
 
 			wind.pubnub = new PubNub({

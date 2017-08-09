@@ -136,22 +136,14 @@ strong {
 	text-align: center;
 }
 
-#info-modal {
-	border-radius: 10px;
- 	background-color: : rgba(128, 128, 128, .7);
-	border-style: dashed;
-	border-width: 1px;
-	border-color: rgba(255, 170, 128, .8);
+.modal-content {
 	font-family: 'Raleway', sans-serif;
-	color: rgba(242, 242, 242, .8);
+	color: #595553;
+	background-color: #ffaa80;
 }
 
 .modal-header {
-	border-radius: 10px;
- 	background-color: : rgba(128, 128, 128, .7);
-	border-style: dashed;
-	border-width: 1px;
-	border-color: rgba(255, 170, 128, .8);
-	font-family: 'Raleway', sans-serif;
-	color: rgba(242, 242, 242, .8);
+	font-weight: 700;
 }
+
+
