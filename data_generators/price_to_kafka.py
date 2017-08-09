@@ -21,9 +21,6 @@ def main():
 		count = 1
 		for line in urllib2.urlopen(price_url):
 
-			for char in line:
-				print char
-
 			if '<Placemark>' in line:
 				in_message = 1
 

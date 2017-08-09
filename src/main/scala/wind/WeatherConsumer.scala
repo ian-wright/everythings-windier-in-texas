@@ -9,11 +9,15 @@ object WeatherConsumer extends Serializable {
 
   val windKeys: String = "wind_speed_kt longitude latitude"
 
-//  val geoString = scala.io.Source.fromFile("texas.geojson").mkString
-//  println(geoString)
-//  val reader = new GeoJSONReader()
-//  val texas: Geometry = reader.read(geoString)
-//  val factory = new GeometryFactory()
+  // NOTE - Right now, I use a simple bounding box around the region of Texas to do the spatial filter.
+  //        A more precise method is to check if coordinate falls within texas.geojson bounds. For this to work,
+  //        I need to work around the non-serializable geospatial classes in the JTS lib, for use across
+  //        a distributed Spark network. This is a TODO.
+
+  //  val geoString = scala.io.Source.fromFile("texas.geojson").mkString
+  //  val reader = new GeoJSONReader()
+  //  val texas: Geometry = reader.read(geoString)
+  //  val factory = new GeometryFactory()
 
   val latBnds: Array[Double] = Array(25.85172, 36.500326)
   val lngBnds: Array[Double] = Array(-106.609084, -93.569257)
@@ -24,6 +28,7 @@ object WeatherConsumer extends Serializable {
     items.filter(keyCheck).sorted
   }
 
+  // only take rows with wind or location information
   def keyCheck(key: String): Boolean = {
     val cleanKey = key.split(":")(0)
     if (windKeys contains cleanKey) true else false
@@ -43,7 +48,6 @@ object WeatherConsumer extends Serializable {
       val lat = reportArray(0).split(":")(1).toFloat
       val lng = reportArray(1).split(":")(1).toFloat
 
-      // TODO - serialize a geospatial lib and do this properly
       if ((lat >= latBnds(0)) && (lat <= latBnds(1)) && (lng >= lngBnds(0)) && (lng <= lngBnds(1))) {
         println("valid weather")
 
@@ -54,7 +58,6 @@ object WeatherConsumer extends Serializable {
         )
 
       } else response = Map("valid" -> 0)
-
 
       //val coords = new Coordinate(lat, lng)
       //val point = new Point(coords, factory)

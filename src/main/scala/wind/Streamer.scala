@@ -33,7 +33,7 @@ object Streamer {
         println(pubnubError.getErrorString + channel)
     }
 
-    // Create context with 1 second batch interval
+    // Create Spark Streaming context with 1 second batch interval
     val master: String = "local[4]"
     val sparkConf = new SparkConf().setAppName("wind").setMaster(master)
     val ssc = new StreamingContext(sparkConf, Seconds(1))
@@ -46,14 +46,13 @@ object Streamer {
       "auto.offset.reset" -> "largest"
     )
 
-    // maybe get the the most recent offsets instead of using 0 here?
-    // play around with multiple partitions?
-    // how do we know that partition has id 0?
+    // start kafka offsets at 0 (broker configured to clear cache after 1 second)
     val fromOffsets: Map[TopicAndPartition, Long] = Map(
       TopicAndPartition("weather", 0) -> 0,
       TopicAndPartition("price", 0) -> 0
     )
 
+    // Create the Spark direct connection to Kafka broker
     val data = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder, Map[String, String]](
       ssc,
       kafkaParams,
@@ -65,6 +64,7 @@ object Streamer {
       val topic = data getOrElse ("topic", "throwaway")
       val message = data getOrElse ("message", "throwaway")
 
+      // check Kafka topic, and handle message accordingly
       if (topic == "weather") {
         val lines = parseWeather(message)
         cleanWeather(lines)
@@ -84,6 +84,7 @@ object Streamer {
       check == 1
     }
 
+    // publish stream of msgs to PubNub
     def publishEvents(rdd: RDD[Map[String, Any]]): Unit = {
       val reports = rdd.collect()
       reports.foreach { report =>

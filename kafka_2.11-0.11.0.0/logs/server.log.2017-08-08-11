@@ -1,0 +1,8 @@
+[2017-08-08 11:06:12,920] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2017-08-08 11:10:43,689] INFO Updated PartitionLeaderEpoch. New: {epoch:16, offset:135028}, Current: {epoch:13, offset135028} for Partition: price-0. Cache now contains 1 entries. (kafka.server.epoch.LeaderEpochFileCache)
+[2017-08-08 11:10:47,645] INFO Updated PartitionLeaderEpoch. New: {epoch:21, offset:1480096}, Current: {epoch:18, offset1480096} for Partition: weather-0. Cache now contains 1 entries. (kafka.server.epoch.LeaderEpochFileCache)
+[2017-08-08 11:16:12,905] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2017-08-08 11:26:12,884] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2017-08-08 11:36:12,867] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2017-08-08 11:46:12,848] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2017-08-08 11:56:12,828] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)

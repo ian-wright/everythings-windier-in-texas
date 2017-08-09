@@ -44,7 +44,6 @@ def main():
             SubscriptionMode.SIMPLE,
             subscription_observer)
 
-        print('\nPress CTRL-C to exit\n')
         try:
             while True:
                 time.sleep(1)
