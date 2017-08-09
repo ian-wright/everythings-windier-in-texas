@@ -8,7 +8,7 @@ def main():
 
 	# kafka v2.11-0.11.0.0
 	producer = KafkaProducer(bootstrap_servers='localhost:9092',
-	                         client_id='ian_local',
+	                         client_id='local_python',
 	                         value_serializer=str.encode,
 	                         # value_serializer=lambda v: json.dumps(v).encode('utf-8'),
 	                         key_serializer=str.encode)
