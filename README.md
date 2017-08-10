@@ -29,6 +29,12 @@ But also... the Texas electricity market (ERCOT - Electricity Reliability Counci
 - (in new terminal tab) - start the single-node kafka broker
 
   *kafka_2.11-0.11.0.0/bin/kafka-server-start.sh kafka_2.11-0.11.0.0/config/server.properties*
+
+- (in a new terminal tab) - create the kafka topics on the broker
+
+  *kafka_2.11-0.11.0.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic price*
+  
+  *kafka_2.11-0.11.0.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic weather*
   
 - (in new terminal tab) - publish weather data to kafka
 
