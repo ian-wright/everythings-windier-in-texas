@@ -1,7 +1,7 @@
 # Everything's WINDIER in TEXAS
-### This project uses Kafka, Spark Streaming, and PubNub to stream localized wholesale power price data and wind data throughout Texas @ https://ian-wright.github.io/everythings-windier-in-texas/ 
+### This project uses Kafka, Spark Streaming, and PubNub, (and Scala) to stream localized wholesale power prices and wind data throughout Texas in realtime @ https://ian-wright.github.io/everythings-windier-in-texas/ 
 
-## add a screencast
+#### *add a screencast*
 
 ## Motivation
 Mainly because I wanted a project to learn some data streaming technologies, and dive into Scala programming. 
@@ -22,31 +22,31 @@ But also... the Texas electricity market (ERCOT - Electricity Reliability Counci
 + pip install satori-rtm-sdk
 
 ## Make it go:
-### There are several concurrent processes running, so we'll need a whopping FIVE tabs open to the repo's directory
+### To run several concurrent processes, you'll need FIVE tabs open to the repo's directory:
 - clone this repo.
-- (in new terminal tab) - start a local single-node zookeeper instance
+- (tab #1) - start a local single-node zookeeper instance
 
   *kafka_2.11-0.11.0.0/bin/zookeeper-server-start.sh kafka_2.11-0.11.0.0/config/zookeeper.properties*
   
-- (in new terminal tab) - start the single-node kafka broker
-
-  *kafka_2.11-0.11.0.0/bin/kafka-server-start.sh kafka_2.11-0.11.0.0/config/server.properties*
-
-- (in a new terminal tab) - create the kafka topics on the broker
+- (tab #2) - create the kafka topics on the broker (if you haven't already)
 
   *kafka_2.11-0.11.0.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic price*
   
   *kafka_2.11-0.11.0.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic weather*
   
-- (in new terminal tab) - publish weather data to kafka
+- (still tab #2) - start the single-node kafka broker
+
+  *kafka_2.11-0.11.0.0/bin/kafka-server-start.sh kafka_2.11-0.11.0.0/config/server.properties*
+  
+- (tab #3) - publish weather data to kafka
 
   *python data_generators/satori_to_kafka.py*
   
-- (in new terminal tab) - publish price data to kafka
+- (tab #4) - publish price data to kafka
 
   *python data_generators/price_to_kafka.py*
   
-- (in a new terminal tab) - compile and run
+- (tab #5) - compile and run
 
     *sbt compile*
     
