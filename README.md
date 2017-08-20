@@ -23,7 +23,8 @@ But also... the Texas electricity market (ERCOT - Electricity Reliability Counci
 
 ## Make it go:
 ### To run several concurrent processes, you'll need FIVE tabs open to the repo's directory:
-- clone this repo.
+- If you don't want to run it locally, but want to see the visualization, contact me to "turn it on".
+- Otherwise, clone this repo.
 - (tab #1) - start a local single-node zookeeper instance
 
   *kafka_2.11-0.11.0.0/bin/zookeeper-server-start.sh kafka_2.11-0.11.0.0/config/zookeeper.properties*
