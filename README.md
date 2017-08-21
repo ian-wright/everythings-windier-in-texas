@@ -1,7 +1,7 @@
 # Everything's WINDIER in TEXAS
 ### This project uses Kafka, Spark Streaming, and PubNub, (and Scala) to stream localized wholesale power prices and wind data throughout Texas in realtime @ https://ian-wright.github.io/everythings-windier-in-texas/ 
 
-#### *add a screencast*
+![screencast](viz.gif)
 
 ## Motivation
 Mainly because I wanted a project to learn some data streaming technologies, and dive into Scala programming. 
