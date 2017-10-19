@@ -29,7 +29,7 @@ But also... the Texas electricity market (ERCOT - Electricity Reliability Counci
 
   *kafka_2.11-0.11.0.0/bin/zookeeper-server-start.sh kafka_2.11-0.11.0.0/config/zookeeper.properties*
   
-- (tab #2) - create the kafka topics on the broker (if you haven't already)
+- (tab #2) - create the kafka topics on the broker
 
   *kafka_2.11-0.11.0.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic price*
   
